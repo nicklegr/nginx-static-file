@@ -10,3 +10,7 @@ services:
         read_only: true
     networks:
       - nginx-proxy
+
+networks:
+  nginx-proxy:
+    external: true
