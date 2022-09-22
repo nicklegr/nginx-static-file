@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  web:
+    image: nginx:1.23.1
+    volumes:
+      - type: bind
+        source: ./content
+        target: /usr/share/nginx/html
+        read_only: true
+    networks:
+      - nginx-proxy
